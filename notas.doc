@@ -1,0 +1,15 @@
+equisitos:
+ - Deve ser capaz de salvar um produto
+   - Atributos: nome, descrição, preço, marca, isbn (aberto para adicionar mais atributos)
+ - Deve ser capaz de deletar um produto //delete
+ - Deve ser capaz de atualizar apenas o nome do produto //
+ - Deve ser capaz de atualizar todos os dados do produto 
+ - Deve ser capaz de buscar o produto pelo id //get id
+ - Deve ser capaz de buscar o produto por qualquer atributo.
+ Stack de tecnologias:
+  - Database: Pode salvar em memória, persistindo os dados enquanto a API está de pé
+  - Node + TypeScript
+  - Express.js ou algum framework de sua preferência
+ Bônus:
+  - MongoDB 
+  - Docker
