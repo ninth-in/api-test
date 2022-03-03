@@ -40,6 +40,7 @@ const getID = (requisicao:Request, resposta:Response, proximo: NextFunction) => 
     });
 };
 
+//teste....git
 const createTable = (requisicao:Request, resposta:Response, proximo: NextFunction) => {
     let {name, preco, descricao, marca} = requisicao.body;
 
