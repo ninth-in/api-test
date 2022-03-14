@@ -1,8 +1,8 @@
-import {Document} from "mongoose";
 import {Schema} from "mongoose";
 import mongoose from "mongoose";
 
-interface Tables extends Document{
+export type UserDocument = {
+    _id: string;
     name : string;
     description : string;
     price : number;
@@ -10,12 +10,12 @@ interface Tables extends Document{
     isbn : number;
 }
 
-const TableSchema: Schema = new Schema({
+const UserSchema: Schema = new Schema({
     name : {type: String, required: true},
     description : {type: String, required: true},
     price : {type: Number, required: true},
     brand : {type: String, required: true},
-    isbn : {type: Number, required: true}
+    isbn : {type: Number, required: true, unique: true}
 });
 
-export default mongoose.model<Tables>('Table', TableSchema);
+export default mongoose.model<UserDocument>('User', UserSchema);

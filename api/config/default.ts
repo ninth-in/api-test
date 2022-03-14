@@ -1,8 +1,7 @@
 import mongoose from "mongoose";
-import config from "config"; 
 
 async function connect(){
-    const dbUri = config.get<string>("dbUri");
+    const dbUri = "mongodb+srv://root:12345@cluster0.by0jq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
     try{
         await mongoose.connect(dbUri);

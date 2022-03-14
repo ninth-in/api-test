@@ -1,10 +1,9 @@
 import express from "express";
-import config from "config";
 import bodyParser from "body-parser";
 import roteador from "./routes/rotas";
-import connect from "./bd/index"
+import connect from "./config/default"
 
-const port = config.get<number>('port');
+const port = 3000;
 const app = express();
 
 connect();
