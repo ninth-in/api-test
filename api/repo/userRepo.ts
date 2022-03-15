@@ -18,6 +18,10 @@ export default class UserRepository{
         return User.findByIdAndUpdate(id,user,{new:true})
     }
 
+    async updateUser (id:string, user: UserDocument): Promise<UserDocument>{
+        return User.findByIdAndUpdate(id,user,{new:true})
+    }
+
     async deleteUser(id: string): Promise<void>{
         return User.findByIdAndDelete(id)
     }
