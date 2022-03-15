@@ -10,7 +10,7 @@ export type UserDocument = {
     isbn : number;
 }
 
-const UserSchema: Schema = new Schema({
+export const UserSchema: Schema = new Schema({
     name : {type: String, required: true},
     description : {type: String, required: true},
     price : {type: Number, required: true},
