@@ -4,11 +4,11 @@ import controller from "../controllers/user.controller";
 const router = express.Router();
 
 router
-    .get('/product', controller.getAll)
+    .get('/products', controller.getAll)
     .post('/product', controller.createUser)
-    .get('/product/:ID', controller.getID)
-    .delete('/product/:ID', controller.deleteUser)
-    .put('/product/:ID', controller.updateUser)
-    .patch('/product/:ID', controller.updateName);
+    .get('/product/:id', controller.getID)
+    .delete('/product/:id', controller.deleteUser)
+    .put('/product/:id', controller.updateUser)
+    .patch('/product/:id', controller.updateName);
 
 export default router;

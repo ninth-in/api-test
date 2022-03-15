@@ -28,13 +28,9 @@ async function getID(req:Request, res:Response, next: NextFunction): Promise<any
 //POST
 async function createUser(req:Request, res:Response, next: NextFunction): Promise<any>{
     console.log(req.body);
-    try {
-        const newUser: UserDocument = req.body as UserDocument;
-        const savedUser: UserDocument = await userService.createUser(newUser);
-        return res.status(200).json(savedUser);
-      } catch (err: any) {
-        next(err);
-      }
+    const newUser: UserDocument = req.body as UserDocument;
+    const savedUser: UserDocument = await userService.createUser(newUser);
+    return res.status(201).json(savedUser);
 }
 
 //PATCH
