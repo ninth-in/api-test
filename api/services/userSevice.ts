@@ -25,6 +25,10 @@ export default class UserService{
         return this.userRepository.updateName(id,user)
     }
 
+    async updateUser(id: string, user: UserDocument): Promise<UserDocument>{
+        return this.userRepository.updateUser(id,user)
+    }
+
     async deleteUser(id: string): Promise<void>{
         return this.userRepository.deleteUser(id)
     }
