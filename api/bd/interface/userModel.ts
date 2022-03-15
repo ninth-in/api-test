@@ -12,7 +12,7 @@ export type UserDocument = {
 
 export const UserSchema: Schema = new Schema({
     name : {type: String, required: true},
-    description : {type: String, required: true},
+    description : {type: String, required: false},
     price : {type: Number, required: true},
     brand : {type: String, required: true},
     isbn : {type: Number, required: true, unique: true}
