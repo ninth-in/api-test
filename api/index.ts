@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import roteador from "./routes/rotas";
 import connect from "./config/default"
 
-const port = 3000;
+const port = process.env.port || 3000;
 const app = express();
 
 connect();
