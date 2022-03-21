@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import roteador from "./routes/rotas";
 import connect from "./config/default"
 
-const port = process.env.port || 3000;
+const PORT = process.env.PORT || 5000;
 const app = express();
 
 connect();
@@ -11,6 +11,6 @@ app.use(bodyParser.json());
 
 app.use('/product-api/v1', roteador);
 
-app.listen(port, async() => {
+app.listen(PORT, async() => {
     console.log('ok!');
 })
