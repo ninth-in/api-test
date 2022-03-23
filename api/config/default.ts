@@ -1,11 +1,9 @@
 import mongoose from "mongoose"
 import envConfig from "./env.config"
 
-async function connect(){
-    const dbUri = envConfig.MONGO_URI;
-
+function connect(){
     try{
-        await mongoose.connect(dbUri);
+        mongoose.connect(envConfig.MONGO_URI);
         console.log("connect to DB");
     } catch(error){
         console.log("could not connect to DB");
