@@ -16,11 +16,12 @@ const express_1 = __importDefault(require("express"));
 const body_parser_1 = __importDefault(require("body-parser"));
 const rotas_1 = __importDefault(require("./routes/rotas"));
 const default_1 = __importDefault(require("./config/default"));
-const PORT = process.env.PORT || 3000;
+const env_config_1 = __importDefault(require("./config/env.config"));
 const app = (0, express_1.default)();
+const { PORT, API_ROOT_PATH } = env_config_1.default;
 (0, default_1.default)();
 app.use(body_parser_1.default.json());
-app.use('/product-api/v1', rotas_1.default);
+app.use(API_ROOT_PATH, rotas_1.default);
 app.listen(PORT, () => __awaiter(void 0, void 0, void 0, function* () {
     console.log('ok!');
 }));

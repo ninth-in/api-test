@@ -1,7 +1,8 @@
-import mongoose from "mongoose";
+import mongoose from "mongoose"
+import envConfig from "./env.config"
 
 async function connect(){
-    const dbUri = "mongodb+srv://root:12345@cluster0.by0jq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    const dbUri = envConfig.MONGO_URI;
 
     try{
         await mongoose.connect(dbUri);

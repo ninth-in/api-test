@@ -1,0 +1,10 @@
+import dotenv from 'dotenv'
+dotenv.config()
+
+const envConfig= {
+    PORT : process.env.PORT || 3000,
+    API_ROOT_PATH: process.env.API_ROOT_PATH,
+    MONGO_URI: process.env.MONGO_URI
+}
+
+export default envConfig;

@@ -13,9 +13,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
+const env_config_1 = __importDefault(require("./env.config"));
 function connect() {
     return __awaiter(this, void 0, void 0, function* () {
-        const dbUri = "mongodb+srv://root:12345@cluster0.by0jq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+        const dbUri = env_config_1.default.MONGO_URI;
         try {
             yield mongoose_1.default.connect(dbUri);
             console.log("connect to DB");
