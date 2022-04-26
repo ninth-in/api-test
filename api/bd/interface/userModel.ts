@@ -2,10 +2,10 @@ import {Schema} from "mongoose";
 import mongoose from "mongoose";
 
 export type UserDocument = {
-    _id: string;
+    _id: string; //tirar no get
     name : string;
     description : string;
-    price : number;
+    price : number; //adicionar R$ + ,00
     brand : string;
     isbn : number;
 }

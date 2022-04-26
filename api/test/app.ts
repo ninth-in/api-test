@@ -1,8 +1,8 @@
 import express from "express";
 import bodyParser from "body-parser";
-import router from "./routes/rotas";
-import connect from "./config/default"
-import envConfig from "./config/env.config";
+import router from "../routes/rotas"
+import connect from "../config/default"
+import envConfig from "../config/env.config";
 
 const app = express();
 const {PORT, API_ROOT_PATH} = envConfig;
@@ -15,3 +15,5 @@ app.use(API_ROOT_PATH, router);
 app.listen(PORT, async() => {
     console.log('ok!');
 })
+
+export {app}
