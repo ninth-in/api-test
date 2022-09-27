@@ -14,6 +14,7 @@ app.use(API_ROOT_PATH, router);
 
 app.listen(PORT, async() => {
     console.log('ok!');
+    
 })
 
 export {app}
